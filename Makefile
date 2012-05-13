@@ -17,17 +17,12 @@ install:
 	@mkdir -p $(LDIR)
 	@cp src/orbit.lua $(LDIR)
 	@mkdir -p $(LDIR)/orbit
-	@cp src/model.lua $(LDIR)/orbit
-	@cp src/cache.lua $(LDIR)/orbit
-	@cp src/pages.lua $(LDIR)/orbit
-	@cp src/ophandler.lua $(LDIR)/orbit
+	@cp -r src/orbit $(LDIR)
 	@mkdir -p $(BDIR)
-	@cp src/orbit $(BDIR)
-	@if [ -f ./wsapi/Makefile ]; then \
-          @echo "WSAPI compilation..."
-	  @cd wsapi && make install; \
-          @echo "WSAPI compilation is done!"
-	@fi
+	@chmod +x src/launchers/op.cgi src/launchers/op.fcgi src/launchers/orbit
+	@cp -r src/launchers/op.cgi $(BDIR)
+	@cp -r src/launchers/op.fcgi $(BDIR)
+	@cp -r src/launchers/orbit $(BDIR)
 	@echo "Orbit installing is done!"
 
 install-samples:
