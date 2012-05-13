@@ -10,9 +10,9 @@ install:
 	copy src\orbit.lua "$(LUA_DIR)"
 	xcopy /E src\orbit "$(LUA_DIR)"
 	IF NOT EXIST "$(BIN_DIR)" mkdir "$(BIN_DIR)"
-	copy src\launcher\orbit "$(BIN_DIR)"
-	copy src\launcher\ob.cgi "$(BIN_DIR)"
-	copy src\launcher\ob.fcgi "$(BIN_DIR)"
+	copy src\launchers\orbit "$(BIN_DIR)"
+	copy src\launchers\op.cgi "$(BIN_DIR)"
+	copy src\launchers\op.fcgi "$(BIN_DIR)"
 
 install-rocks: install
 	IF NOT EXIST "$(PREFIX)\samples" mkdir "$(PREFIX)\samples"
