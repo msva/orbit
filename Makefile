@@ -27,12 +27,12 @@ install:
 
 install-samples:
 	@mkdir -p $(PREF)/samples
-	@cp -r samples/* $(PREFIX)/samples
+	@cp -r samples/* $(PREF)/samples
 	@echo "Samples installing is done!"
 
 install-doc:
 	@mkdir -p $(PREF)/doc
-	@cp -r doc/* $(PREFIX)/doc
+	@cp -r doc/* $(PREF)/doc
 	@echo "Documentation installing is done!"
 
 install-test:
